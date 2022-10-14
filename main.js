@@ -147,7 +147,7 @@ const ejercicio01 = ()=>{//Funciona Correctamente
     
     }
  
-    const ejercicio4 = ()=>{//Funciona Correctamente
+  const ejercicio4 = ()=>{//Funciona Correctamente
 
       const cantidad_est = parseInt(prompt('digite la cantidad la cantidad de estudiantes'))
       let i = 0;
@@ -188,7 +188,7 @@ const ejercicio01 = ()=>{//Funciona Correctamente
       "\nel promedio de edad del todos lo estudiantes es:"+Promedio_total);
   }
   
-//ejercicio01()
+//ejercicio01();
 //ejercicio2();
 //Ejercicio3();
 //ejercicio4();
