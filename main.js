@@ -127,9 +127,30 @@ const ejercicio01 = ()=>{//Funciona Correctamente
     );
   };
  
+
+  const Ejercicio3 = ()=>{ // funciona correctamente
+  
+      
+    let horas_trabajadas = prompt("Digite las horas trabajadas");
+            var total_pagar, pagar, pagar_extras;
+        if (horas_trabajadas<= 40) {
+            pagar = horas_trabajadas*20;
+            alert("EL total a pagar al trabajador es :" + pagar)
+        }if (horas_trabajadas>40) {
+            extras = horas_trabajadas-40;
+            pagar=40*20;
+            pagar_extras = extras*25;
+            total_pagar=pagar+pagar_extras;
+            alert("El total a pagar al trabajador es " + total_pagar)
+        }
+    
+    
+    }
  
   
 //ejercicio01()
+//ejercicio2();
+//Ejercicio3();
  
 
 
