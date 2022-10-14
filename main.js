@@ -303,6 +303,97 @@ const ejercicio01 = ()=>{//Funciona Correctamente
   
   }
   
+
+  const EJercicio10 = () => { // Funciona todo
+    var candidato1, candidato2, candidato3, mayor, suma;
+  
+    candidato1 = parseInt(
+      prompt("Digite la cantidad de votos obtenidos por el candidato #1")
+    );
+    if (isNaN(candidato1) || candidato1 === undefined) {
+      alert("Dato no valido Digitelo de nuevo ");
+      return;
+    }
+  
+    candidato2 = parseInt(
+      prompt("Digite la cantidad de votos obtenidos por el candidato #2")
+    );
+    if (isNaN(candidato2) || candidato2 === undefined) {
+      alert("Dato no valido Digitelo de nuevo ");
+      return;
+    }
+    candidato3 = parseInt(
+      prompt("Digite la cantidad de votos obtenidos por el candidato #3")
+    );
+    if (isNaN(candidato3) || candidato3 === undefined) {
+      alert("Dato no valido Digitelo de nuevo ");
+      return;
+    }
+    suma = candidato1 + candidato2 + candidato3;
+    console.log("candidato#1 = " + candidato1);
+    console.log("candidato#2 = " + candidato2);
+    console.log("candidato#3 = " + candidato3);
+    if (suma == 50000) {
+      if (candidato1 == candidato2 && candidato1 == candidato3) {
+        alert("Todos los candidatos tienen la votacion de " + candidato1);
+      }
+      if (candidato1 == candidato2 && candidato3 > candidato2) {
+        alert(
+          "la votacion de los candidatos #1 y #2 es igual con un numero de " +
+          candidato1 +
+          " votos, pero el ganador es el candidato #3 con una votacion de " +
+          candidato3
+        );
+        return
+      }
+      if (candidato1 == candidato3 && candidato2 > candidato1) {
+        alert(
+          "la votacion de los candidatos #1 y #3 es igual con un numero de " +
+          candidato1 +
+          " votos, pero el ganador es el candidato #3 con una votacion de " +
+          candidato2
+        );
+        return
+      }
+      if (candidato2 == candidato3 && candidato1 > candidato2) {
+        alert(
+          "la votacion de los candidatos #2 y #3 es igual con un numero de " +
+          candidato2 +
+          " votos, pero el ganador es el candidato #3 con una votacion de " +
+          candidato1
+        );
+        return
+      }
+  
+      if (candidato1 > candidato2 && candidato1 > candidato3) {
+        alert(
+          "El candidato ganador es el Candidato #1, con la cantidad de votos :" + candidato1)
+  
+  
+        return
+      }
+      if (candidato2 > candidato1 && candidato2 > candidato3) {
+        alert(
+          "El candidato ganador es el Candidato #2, con la cantidad de votos :" +
+          candidato2
+        );
+  
+      }
+      if (candidato3 > candidato1 && candidato3 > candidato2) {
+        alert(
+          "El candidato ganador es el Candidato #3, con la cantidad de votos :" +
+          candidato3
+        );
+      }
+    } else {
+      alert(
+        "La cantidad total de los votos de los 3 candidatos debe ser de 50000, la cantidad de votos entregados fue de " +
+        suma
+      );
+    }
+  }
+
+
 //ejercicio01();
 //ejercicio2();
 //Ejercicio3();
@@ -310,6 +401,7 @@ const ejercicio01 = ()=>{//Funciona Correctamente
 //Ejercicio5();
 //ejercicio7();
 //Ejercicio8();
+//EJercicio10();
  
 
 
