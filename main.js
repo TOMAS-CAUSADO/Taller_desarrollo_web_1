@@ -256,6 +256,52 @@ const ejercicio01 = ()=>{//Funciona Correctamente
   
   }
  
+  const Ejercicio8 = () => { // Problemas con la recoleccion de datos
+
+    var valor_Cliente, descuento1, descuento2, descuento3, descuento4, descuento5, Cantidad_Clientes, edad, total_descuento;
+    var total, total2, total3, total4, total5;
+  
+    parseFloat(valor_Cliente = prompt("El valor de la entrada es : "))
+    parseFloat(Cantidad_Clientes = prompt("La cantidad de clientes es"))
+  
+    for (var index = 1; index <= Cantidad_Clientes; index++) {
+      parseInt(edad = prompt("Digite la Edad :"))
+      if (edad >= 5) {
+        if (edad <= 14) {
+          parseFloat(descuento1 = valor_Cliente - (valor_Cliente * 0.35))
+          parseFloat(total1 = ((valor_Cliente * 0.35) + total1))
+        }
+        if (edad >= 15 || edad < 20) {
+          parseFloat(descuento1 = valor_Cliente - (valor_Cliente * 0.25))
+          parseFloat(total2) = ((valor_Cliente * 0.25) + total2)
+        }
+        if (edad >= 20 || edad < 46) {
+          parseFloat(descuento1 = valor_Cliente - (valor_Cliente * 0.10))
+          parseFloat(total3) = ((valor_Cliente * 0.10) + total3)
+        }
+        if (edad >= 46 || edad < 66) {
+          parseFloat(descuento1 = valor_Cliente - (valor_Cliente * 0.25))
+          parseFloat(total4) = ((valor_Cliente * 0.25) + total4)
+        }
+        if (edad >= 66) {
+          parseFloat(descuento1 = valor_Cliente - (valor_Cliente * 0.35))
+          parseFloat(total5) = ((valor_Cliente * 0.35) + total5)
+        }
+  
+      } else {
+        alert("Menores de 5 años no son permitidos. este registro se perdera")
+      }
+      if (index == Cantidad_Clientes) {
+        parseFloat(total_descuento) = parseFloat(total1 + total2 + total3 + total4 + total5)//no me funciona la suma
+  
+        alert("El descuento neto de todas las entradas fue de :" + total_descuento)
+        alert("El valor total de las entradas sin descuentos fue de :" + (valor_Cliente * Cantidad_Clientes))
+      }
+    }
+  
+  
+  
+  }
   
 //ejercicio01();
 //ejercicio2();
@@ -263,6 +309,7 @@ const ejercicio01 = ()=>{//Funciona Correctamente
 //ejercicio4();
 //Ejercicio5();
 //ejercicio7();
+//Ejercicio8();
  
 
 
