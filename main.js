@@ -147,10 +147,51 @@ const ejercicio01 = ()=>{//Funciona Correctamente
     
     }
  
+    const ejercicio4 = ()=>{//Funciona Correctamente
+
+      const cantidad_est = parseInt(prompt('digite la cantidad la cantidad de estudiantes'))
+      let i = 0;
+      if (isNaN(cantidad_est)|| cantidad_est <= 0) {
+          alert('digite correctamente el numero de estudiantes')
+          return;
+      }
+    
+      const datos_estudiantes = [];
+      while (i < cantidad_est) {
+          
+          
+          let sexo = prompt("1 = hombre\n 2= mujer");
+          sexo = sexo.toUpperCase();
+                  if ( (sexo !=="1" && sexo !== "2")) {
+              alert('Género no valido, inténtelo nuevamente ')
+              continue;
+          }
+          const edad = parseInt(prompt("Cuál es la edad del estudiante #"+(i+1)))
+          if (edad === undefined || edad <= 0) {
+              alert("ingrese una edad correcta")
+              continue;
+          }
+          datos_estudiantes.push({sexo_est: sexo,edades: edad});
+          i++;
+      }
+      const edad_h = datos_estudiantes.filter((student) => student.sexo_est === '1');
+      const sumaedad_h = edad_h.reduce((acc, student) => acc + student.edades, 0);
+      const datosh = edad_h.length;
+      const promedio_h = sumaedad_h / datosh;
+  
+      const promedio_m = datos_estudiantes.filter((student) => student.sexo_est === '2')
+          .reduce((acc, student) => acc + student.edades, 0) / datos_estudiantes.filter((student) => student.sexo_est === '2').length;
+      const Promedio_total = datos_estudiantes.reduce((acc, student) => acc + student.edades, 0) / datos_estudiantes.length;
+     
+      alert("El promedio de edad de los hombres es"+promedio_h 
+      + "\nEl promedio de edad de las mujeres es " +promedio_m+ 
+      "\nel promedio de edad del todos lo estudiantes es:"+Promedio_total);
+  }
   
 //ejercicio01()
 //ejercicio2();
 //Ejercicio3();
+//ejercicio4();
  
 
 
