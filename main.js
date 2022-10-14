@@ -209,6 +209,52 @@ const ejercicio01 = ()=>{//Funciona Correctamente
     typeof (console.log(num_menor))
     alert("El numero menor es :" + num_menor)
   }
+
+  const ejercicio7 = () => { //funciona todo
+
+    let continueProduct = true;
+    let total = 0;
+    let productList = [];
+  
+    while (continueProduct) {
+  
+      let name = prompt("Escriba el nombre del producto");
+      let price = parseInt(prompt("Precio del producto"));
+      let amount = parseInt(prompt("Cantidad de producto"));
+      let productTotal = price * amount;
+  
+      let product = {
+        name: name,
+        price: price,
+        amount: amount,
+        productTotal: productTotal
+      }
+      productList.push(product);
+  
+      total = total + productTotal;
+  
+      continueProduct = prompt("¿Desea Agregar otro producto? 1 = Si 2 = No");
+  
+      if (continueProduct == "1") {
+        continueProduct = true;
+      } else {
+        continueProduct = false;
+      }
+  
+    }
+  
+    productList.forEach((product, index) => {
+  
+      alert("Product" + (index + 1) + ":\nNombre Producto: " + product.name + "\nPrecio: " + product.price + "\nCantidad: " + product.amount + "\nTotal del producto: " + product.productTotal + "\n");
+  
+    });
+  
+    alert("El total a pagar es $ " + total);
+  
+    console.log(productList);
+    console.log(total);
+  
+  }
  
   
 //ejercicio01();
@@ -216,6 +262,7 @@ const ejercicio01 = ()=>{//Funciona Correctamente
 //Ejercicio3();
 //ejercicio4();
 //Ejercicio5();
+//ejercicio7();
  
 
 
