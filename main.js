@@ -187,11 +187,35 @@ const ejercicio01 = ()=>{//Funciona Correctamente
       + "\nEl promedio de edad de las mujeres es " +promedio_m+ 
       "\nel promedio de edad del todos lo estudiantes es:"+Promedio_total);
   }
+
+  const Ejercicio5 = () => { // Funciona Correctamente
+
+    let cant_Numeros, num_menor;
+    console.log(num_menor)
+    cant_Numeros = parseFloat(prompt("Digite la cantidad de numeros a ingresar :"))
+    for (let i = 0; i < cant_Numeros; i++) {
+      let ingresado_numero = parseFloat(prompt("Digite un numero:"))
+      if (i == 0) {
+        num_menor = ingresado_numero
+  
+      }
+  
+  
+      if (ingresado_numero < num_menor) {
+        num_menor = ingresado_numero
+      }
+  
+    }
+    typeof (console.log(num_menor))
+    alert("El numero menor es :" + num_menor)
+  }
+ 
   
 //ejercicio01();
 //ejercicio2();
 //Ejercicio3();
 //ejercicio4();
+//Ejercicio5();
  
 
 
