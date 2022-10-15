@@ -290,7 +290,7 @@ const ejercicio7 = () => {
 };
 
 const Ejercicio8 = () => {
-  // Problemas con la recoleccion de datos
+  // Funciona todo correcto
 
   let continuar = true;
   let cantidadDescuento = 0;
@@ -346,7 +346,7 @@ const Ejercicio8 = () => {
 
 
 const Ejercicio9 = () => {
-  
+  //Funciona todo Correcto
   const vector_ventas = [];
   for (let i = 0; i < 100; i++) {
   vector_ventas.push({
@@ -473,6 +473,62 @@ const EJercicio10 = () => {
   }
 };
 
+
+const Ejercicio11 =()=>{
+
+
+  let primos =[];
+  let numero=2;
+  let cantidad = parseInt(prompt("Escriba la cantidad de números primos a generar"));
+ 
+  while(primos.length!=cantidad){
+
+    if(esPrimo(numero)){
+
+      primos.push(numero);
+    }
+    numero++;
+
+  }
+  console.log(primos);
+  
+  alert("los numeros primos generados estan en consola")
+  alert("El promedio de los numeros primos fue: "+(sumatoria(primos)/cantidad)+"\nLa sumatoria de los numeros primos fue:" +sumatoria(primos)+"\nLa multiplicacion de los numeros primos fue: "+multiplicar(primos));
+  
+}
+
+const sumatoria =(array)=>{
+  let suma =0;
+  for (let index = 0; index < array.length; index++) {
+    suma = suma+ array[index];
+    
+  }
+  return suma;
+
+}
+const multiplicar =(array)=>{
+
+  let mult =1;
+  for (let index = 0; index < array.length; index++) {
+    mult = mult*array[index];
+    
+  }
+  return mult;
+
+}
+const esPrimo = (numero)=>{
+
+  for (let index = 2; index < numero; index++) {
+
+    if(numero%index==0){
+      return false;
+    }
+  }
+  return true;
+}
+
+
+
 const Ejercicio12_1 = () => {
   //Funciona todo
   //De los n elementos de la serie de fibonacci diga cuantos son pares, cuantos impares y cuantos ceros.
@@ -574,6 +630,7 @@ const Ejercicio15 = () => {
 //Ejercicio8();
 //Ejercicio9();
 //EJercicio10();
+//Ejercicio11();
 //Ejercicio12_1();
 //Ejercicio14();
 //Ejercicio15();
