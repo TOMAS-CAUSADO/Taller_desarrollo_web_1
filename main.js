@@ -393,6 +393,38 @@ const ejercicio01 = ()=>{//Funciona Correctamente
     }
   }
 
+  const Ejercicio12_1 = () => {//Funciona todo
+    //De los n elementos de la serie de fibonacci diga cuantos son pares, cuantos impares y cuantos ceros.
+    var pares = 0, impares = 0, ceros = 0;
+    var Numero = parseInt(prompt("Digite el numero a aplicar la serie Fibonacci"))
+    if (Numero === 0) {
+      alert("EL unico elemento en este caso es el cero en contrado una vez")
+      return
+    } if (Numero === 1) {
+      alert("la cantidad de pares en este casos son : 0 \nla cantidad de impares son: 0\nla cantidad de cero en este casos son : 1")
+      return
+    }
+    vector = [0, 1];
+    for (let i = 2; i <= Numero; i++) {
+      vector[i] = vector[i - 1] + vector[i - 2]
+  
+    }
+    for (i = 0; i <= Numero; i++) {
+      if (vector[i] % 2 == 0) {
+        pares = pares + 1;
+      } else {
+        impares = impares + 1;
+      }
+  
+    }
+  
+    alert("La serie Fibbonacci quedo :" + vector + "\nla cantidad de pares en este casos son :" + pares + " teniendo encuenta el cero\nla cantidad de impares son:" + impares + "\nla cantidad de cero en este casos son :1")
+  
+  
+  
+  
+  }
+
 
 //ejercicio01();
 //ejercicio2();
@@ -402,6 +434,7 @@ const ejercicio01 = ()=>{//Funciona Correctamente
 //ejercicio7();
 //Ejercicio8();
 //EJercicio10();
+//Ejercicio12_1();
  
 
 
