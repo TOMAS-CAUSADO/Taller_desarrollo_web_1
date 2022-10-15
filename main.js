@@ -527,6 +527,29 @@ const esPrimo = (numero)=>{
   return true;
 }
 
+const Ejercicio12 = () => {
+
+  let numero = parseInt(prompt("Digite un numero entero"));
+  let cadena = numero.toString();
+  let tamaño = cadena.length;
+  let par = 0, impar = 0, suma = 0, multiplicacion = 1;
+  
+  for (let i = 0; i < tamaño; i++) {
+      const number = parseInt(cadena[i]);
+      if (number % 2 === 0) {
+          par++;
+      } else {
+          impar++;
+      }
+      suma += number;
+      multiplicacion *= number;
+  }
+  const promedio = suma / tamaño;
+  alert("El numero ingresado tiene un tamaños de :"+tamaño+"\nTiene Digitos pares"+par
+  +"\nDigitos impares"+impar+"\nLa sumatoria de todos los digitos es :"
+  +suma+"\nLa multiplicacion de estos es:" +multiplicacion+"\nEl promedio de los digitos es:"+ promedio)
+}
+
 
 
 const Ejercicio12_1 = () => {
@@ -631,6 +654,7 @@ const Ejercicio15 = () => {
 //Ejercicio9();
 //EJercicio10();
 //Ejercicio11();
+//Ejercicio12();
 //Ejercicio12_1();
 //Ejercicio14();
 //Ejercicio15();
