@@ -235,6 +235,35 @@ const Ejercicio5 = () => {
   alert("El numero menor es :" + num_menor);
 };
 
+const Ejercicio6=()=>{
+
+  let x, a;
+  let peso_inicial, peso,suma=0;
+
+  for(let i=0; i<5; i++){
+
+    
+    let peso_inicial = parseFloat(prompt("Cual es su peso Inicial del participante #"+(i+1)+":"))
+  
+    for(a=0; a<10; a++){
+      peso = parseFloat(prompt("digite su peso  participante #"+(i+1)+":"))
+      suma=suma+peso;
+
+    }
+    if ((suma/10)== peso_inicial ) {
+      alert("Su peso se a mantenido")
+
+    }else if((suma/10)<peso_inicial){
+      alert("a BAJADO de peso")
+    }else{
+      alert("Su peso AUMENTO")
+    }
+  }
+
+
+
+}
+
 const ejercicio7 = () => {
   //funciona todo
 
@@ -649,6 +678,7 @@ const Ejercicio15 = () => {
 //Ejercicio3();
 //ejercicio4();
 //Ejercicio5();
+//Ejercicio6();
 //ejercicio7();
 //Ejercicio8();
 //Ejercicio9();
