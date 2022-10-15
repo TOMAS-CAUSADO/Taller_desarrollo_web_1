@@ -451,6 +451,33 @@ const ejercicio01 = ()=>{//Funciona Correctamente
     return mcd;
   }
 
+  const Ejercicio15 = () => { //Funciona todo
+
+    var Pais_A = 25;
+    var Pais_B = 19.9;
+    var N_años = 0, final = 0;
+  
+  
+  
+    while (Pais_A > Pais_B) {
+  
+      Pais_A = Pais_A + (Pais_A * 0.02);
+      Pais_B = Pais_B + (Pais_B * 0.03);
+      N_años = N_años + 1;
+    }
+  
+  
+    final = 1994 + N_años
+    typeof console.log("años total=" + final);
+    console.log(N_años);
+    alert(
+      "La cantidad de años que se necesitaron para que el pais B superara la poblacion del Pais A es de " +
+      (N_años) +
+      " lo que significa que ocurrio en el año " +
+      final
+    );
+  }
+
 //ejercicio01();
 //ejercicio2();
 //Ejercicio3();
@@ -461,5 +488,6 @@ const ejercicio01 = ()=>{//Funciona Correctamente
 //EJercicio10();
 //Ejercicio12_1();
 //Ejercicio14();
+//Ejercicio15();
 
 
