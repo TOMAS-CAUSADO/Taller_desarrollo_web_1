@@ -425,6 +425,31 @@ const ejercicio01 = ()=>{//Funciona Correctamente
   
   }
 
+  const Ejercicio14 = () => {//Funciona todo
+
+
+    const num1 = parseInt(prompt('Ingrese el primer número'));
+    const num2 = parseInt(prompt('Ingrese el segundo número'));
+  
+    if (num1 <= 0 && num2 <= 0) {
+      alert("Digite valores superiores a cero")
+  
+    }
+    const mcd = MCD(num1, num2);
+    alert("El maximo como un divisor entre " + num1 + " y " + num2 + " es " + mcd)
+  
+  }
+  
+  const MCD = (num1, num2) => {
+  
+    let mcd = 0;
+    for (let i = 1; i <= num1 && i <= num2; i++) {
+      if (num1 % i === 0 && num2 % i === 0) {
+        mcd = i;
+      }
+    }
+    return mcd;
+  }
 
 //ejercicio01();
 //ejercicio2();
@@ -435,6 +460,6 @@ const ejercicio01 = ()=>{//Funciona Correctamente
 //Ejercicio8();
 //EJercicio10();
 //Ejercicio12_1();
- 
+//Ejercicio14();
 
 
